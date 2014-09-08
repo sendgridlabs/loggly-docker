@@ -21,6 +21,7 @@ ADD run.sh /tmp/run.sh
 ADD 50-default.conf /etc/rsyslog.d/50-default.conf
 
 EXPOSE 514
+EXPOSE 514/udp
 
 CMD ["/tmp/run.sh"]
 
