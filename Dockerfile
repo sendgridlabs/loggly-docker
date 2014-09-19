@@ -17,10 +17,10 @@ MAINTAINER psquickitjayant
 RUN apt-get update
 RUN apt-get -y dist-upgrade
 
-ADD https://raw.githubusercontent.com/psquickitjayant/loggly-docker/psquickit-dev/run.sh /tmp/
+ADD run.sh  /tmp/run.sh
 RUN chmod +x /tmp/run.sh
 
-ADD https://raw.githubusercontent.com/psquickitjayant/loggly-docker/psquickit-dev/50-default.conf /etc/rsyslog.d/
+ADD 50-default.conf /etc/rsyslog.d/50-default.conf
 
 EXPOSE 514
 EXPOSE 514/udp
