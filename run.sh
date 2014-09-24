@@ -16,6 +16,6 @@ sed -i "s/TAG/$TAG/" /etc/rsyslog.d/50-default.conf
 sudo service rsyslog restart
 
 
-echo netcat:working with netcat| nc -u -w 1 127.0.0.1 514
+echo netcat:I am Docker log| nc -u -w 1 127.0.0.1 514
 
 
