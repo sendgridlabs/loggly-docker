@@ -12,7 +12,7 @@
 #################################################################
 
 FROM ubuntu:trusty
-MAINTAINER psquickitjayant
+MAINTAINER Jonathan Short <jonathan.short@sendgrid.com>
 
 RUN apt-get update
 RUN apt-get -y dist-upgrade
