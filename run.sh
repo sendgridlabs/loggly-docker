@@ -23,6 +23,6 @@ elif [-f "/usr/sbin/syslogd" ]; then
 	#using syslogd if syslogd folder is present
 	exec syslogd -n
 else
-	echo "Unable to locate syslog service"
+	echo "Unable to locate syslog"
 	exit 1
 fi
