@@ -13,4 +13,4 @@ fi
 sed -i "s/TOKEN/$TOKEN/" /etc/rsyslog.d/50-default.conf
 sed -i "s/TAG/$TAG/" /etc/rsyslog.d/50-default.conf
 
-exec rsyslogd -n
+exec /usr/sbin/rsyslogd -n
