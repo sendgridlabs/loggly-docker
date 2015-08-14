@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [ -z "$TOKEN" ]; then
   echo "Missing \$TOKEN"
@@ -10,8 +10,8 @@ if [ -z "$TAG" ]; then
   exit 1
 fi
 
-sed -i "s/TOKEN/$TOKEN/" /etc/rsyslog.d/50-default.conf
-sed -i "s/TAG/$TAG/" /etc/rsyslog.d/50-default.conf
+sed -i "s/TOKEN/$TOKEN/" /etc/rsyslog.conf
+sed -i "s/TAG/$TAG/" /etc/rsyslog.conf
 
 exec /usr/sbin/rsyslogd -n
 
