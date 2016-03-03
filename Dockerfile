@@ -11,7 +11,7 @@
 #
 #################################################################
 
-FROM alpine:3.2
+FROM alpine:3.3
 MAINTAINER Jonathan Short <jonathan.short@sendgrid.com>
 
 RUN apk add --update rsyslog rsyslog-tls && rm -rf /var/cache/apk/*
