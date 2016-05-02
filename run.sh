@@ -37,6 +37,8 @@ LOGGLY_TAG=$(echo "$LOGGLY_TAG" | sed 's/:/\\\\" tag=\\\\"/g')
 sed -i "s/LOGGLY_AUTH_TOKEN/$LOGGLY_AUTH_TOKEN/" /etc/rsyslog.conf
 sed -i "s/LOGGLY_TAG/$LOGGLY_TAG/" /etc/rsyslog.conf
 
+rm -f /var/run/rsyslogd.pid
+
 # Run RSyslog daemon
 exec /usr/sbin/rsyslogd -n
 
