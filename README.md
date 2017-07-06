@@ -1,6 +1,7 @@
 loggly-docker
 =============
 
+Forked from sendgridlabs/loggly-docker to update APK cache and ensure rsyslog and rsyslog-tls are updated to latest versions, fixing TLS issues as per https://github.com/rsyslog/rsyslog/issues/828
 Docker container for loggly (via rsyslog). Check out Loggly's [Docker logging documentation](https://www.loggly.com/docs/docker-syslog/) to learn more.
 
 Usage:
@@ -8,4 +9,3 @@ Usage:
 ```
 docker run -e LOGGLY_AUTH_TOKEN=[Loggly Customer Token] -e LOGGLY_TAG=[Tag Describing Source] [ -e LOGGLY_DEBUG=true ] sendgridlabs/loggly-docker
 ```
-
