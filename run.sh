@@ -25,11 +25,6 @@ fi
 # Create spool directory
 mkdir -p /var/spool/rsyslog
 
-# If LOGGLY_DEBUG is true, write logs to stdout as well
-if [ "$LOGGLY_DEBUG" = true ]; then
-  sed -i "/\*\.\* @@logs-01\.loggly\.com.*/a \*\.\* \:omstdout\:" /etc/rsyslog.conf
-fi
-
 # Expand multiple tags, in the format of tag1:tag2:tag3, into several tag arguments
 LOGGLY_TAG=$(echo "$LOGGLY_TAG" | sed 's/:/\\\\" tag=\\\\"/g')
 
@@ -39,4 +34,3 @@ sed -i "s/LOGGLY_TAG/$LOGGLY_TAG/" /etc/rsyslog.conf
 
 # Run RSyslog daemon
 exec /usr/sbin/rsyslogd -n
-
