@@ -1,18 +1,5 @@
-#################################################################
-#
-#                    ##        .
-#              ## ## ##       ==
-#           ## ## ## ##      ===
-#       /""""""""""""""""\___/ ===
-#  ~~~ {~~ ~~~~ ~~~ ~~~~ ~~ ~ /  ===- ~~~
-#       \______ o          __/
-#         \    \        __/
-#          \____\______/
-#
-#################################################################
-
 FROM alpine:3.6
-MAINTAINER Jonathan Short <jonathan.short@sendgrid.com>
+LABEL maintainer="Jonathan Short <jonathan.short@sendgrid.com>"
 
 RUN rm -rf /var/cache/apk/* && apk update && \
     apk add --update rsyslog rsyslog-tls && \
