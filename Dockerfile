@@ -7,6 +7,8 @@ ADD run.sh /tmp/run.sh
 RUN chmod +x /tmp/run.sh
 ADD rsyslog.conf /etc/
 ADD loggly.crt /etc/rsyslog.d/keys/ca.d/
+ADD intake.logs.datadoghq.com.crt to /etc/ssl/certs/
+ADD datadog.conf to /etc/rsyslog.d/
 
 EXPOSE 514
 EXPOSE 514/udp
